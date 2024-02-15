@@ -8,6 +8,13 @@ namespace TestFormFactoryDesign
 {
     public interface INPC
     {
+        int Strength();
+        int Dexterity();
+        int Constitution();
+        int Intelligence();
+        int Wisdom();
+        int Charisma();
+
         string Create();
     }
 }

@@ -17,8 +17,10 @@ namespace TestFormFactoryDesign
             InitializeComponent();
 
             string[] npcClass = { "Fighter", "Thief", "Wizard" };
+            string[] npcRace = { "Human", "Elf", "Dwarf", "Tiefling" };
 
             npccmb.Items.AddRange(npcClass);
+            npcRacecmb.Items.AddRange(npcRace);
 
 
         }
@@ -43,33 +45,13 @@ namespace TestFormFactoryDesign
             //    Console.WriteLine(ex.Message);
             //}
 
-            int strength = 0;
-            int dexterity = 0;
-            int constitution = 0;
-            int intelligence = 0;
-            int wisdom = 0;
-            int charisma = 0;
 
-
-            Random rnd = new Random();
-
-            for (int j = 0; j < 3; j++)
-            {
-                strength = strength + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-                dexterity = dexterity + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-                constitution = constitution + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-                intelligence = intelligence + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-                wisdom = wisdom + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-                charisma = charisma + Convert.ToInt32(rnd.Next(1, 7)); // returns random integers >= 10 and < 20
-
-            }
-
-            strengthtxt.Text = strength.ToString();
-            dextxt.Text = dexterity.ToString();
-            contxt.Text = constitution.ToString();
-            inttxt.Text = intelligence.ToString();
-            wistxt.Text = wisdom.ToString();
-            chartxt.Text = charisma.ToString();
+            strengthtxt.Text = npc.Strength().ToString();
+            dextxt.Text = npc.Dexterity().ToString();
+            contxt.Text = npc.Constitution().ToString();
+            inttxt.Text = npc.Intelligence().ToString();
+            wistxt.Text = npc.Wisdom().ToString();
+            chartxt.Text = npc.Charisma().ToString();
 
 
         }
