@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 
 namespace TestFormFactoryDesign
 {
-    public class Thief : INPC 
+    public class Elf : INPC
     {
+        public string npcRace;
+        public string npcClass { get; set; }
         public int strength { get; set; }
         public int dexterity { get; set; }
         public int constitution { get; set; }
         public int intelligence { get; set; }
         public int wisdom { get; set; }
         public int charisma { get; set; }
-        public Thief() { }
+        public Elf() { }
 
-        public Thief(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public Elf(string npcClass, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
+            this.npcRace = "Elf";
+            this.npcClass = npcClass;
             this.strength = strength;
-            this.dexterity = dexterity;
+            this.dexterity = dexterity + 2;
             this.constitution = constitution;
             this.intelligence = intelligence;
             this.wisdom = wisdom;
@@ -33,11 +37,13 @@ namespace TestFormFactoryDesign
         public int Wisdom() { return wisdom; }
         public int Charisma() { return charisma; }
 
-        public string Create ()
+        public string Create()
         {
             string npcResponse;
-            npcResponse = "Fighter Created";
+            npcResponse = "Elven " + this.npcClass + " Created";
             return npcResponse;
         }
+
+
     }
 }

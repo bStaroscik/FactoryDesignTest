@@ -1,35 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestFormFactoryDesign
+﻿namespace TestFormFactoryDesign
 {
-    public class Fighter : INPC
+    public class Dwarf : INPC
     {
+        public string npcRace;
+        public string npcClass { get; set; }
         public int strength { get; set; }
         public int dexterity { get; set; }
         public int constitution { get; set; }
         public int intelligence { get; set; }
         public int wisdom { get; set; }
         public int charisma { get; set; }
-        public Fighter() { }
+        public Dwarf() { }
 
-        public Fighter(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public Dwarf(string npcClass, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
+            this.npcRace = "Dwarf";
+            this.npcClass = npcClass;
             this.strength = strength;
             this.dexterity = dexterity;
-            this.constitution = constitution;
+            this.constitution = constitution + 2;
             this.intelligence = intelligence;
             this.wisdom = wisdom;
             this.charisma = charisma;
         }
-
-        //public int AbilityScores()
-        //{
-
-        //}
 
         public int Strength() { return strength; }
         public int Dexterity() { return dexterity; }
@@ -41,8 +34,10 @@ namespace TestFormFactoryDesign
         public string Create()
         {
             string npcResponse;
-            npcResponse = "Fighter Created";
+            npcResponse = "Dwarven " + this.npcClass + " Created";
             return npcResponse;
         }
+
+
     }
 }

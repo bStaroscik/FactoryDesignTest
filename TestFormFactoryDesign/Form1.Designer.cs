@@ -44,12 +44,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.npcRacecmb = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtOutput
             // 
             this.txtOutput.Location = new System.Drawing.Point(256, 343);
-            this.txtOutput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOutput.Margin = new System.Windows.Forms.Padding(4);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(349, 84);
@@ -59,8 +61,8 @@
             // 
             this.npccmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.npccmb.FormattingEnabled = true;
-            this.npccmb.Location = new System.Drawing.Point(33, 15);
-            this.npccmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.npccmb.Location = new System.Drawing.Point(33, 46);
+            this.npccmb.Margin = new System.Windows.Forms.Padding(4);
             this.npccmb.Name = "npccmb";
             this.npccmb.Size = new System.Drawing.Size(160, 24);
             this.npccmb.TabIndex = 1;
@@ -68,7 +70,7 @@
             // strengthtxt
             // 
             this.strengthtxt.Location = new System.Drawing.Point(33, 94);
-            this.strengthtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.strengthtxt.Margin = new System.Windows.Forms.Padding(4);
             this.strengthtxt.Name = "strengthtxt";
             this.strengthtxt.Size = new System.Drawing.Size(132, 22);
             this.strengthtxt.TabIndex = 2;
@@ -76,7 +78,7 @@
             // dextxt
             // 
             this.dextxt.Location = new System.Drawing.Point(33, 142);
-            this.dextxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dextxt.Margin = new System.Windows.Forms.Padding(4);
             this.dextxt.Name = "dextxt";
             this.dextxt.Size = new System.Drawing.Size(132, 22);
             this.dextxt.TabIndex = 3;
@@ -84,7 +86,7 @@
             // contxt
             // 
             this.contxt.Location = new System.Drawing.Point(33, 190);
-            this.contxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contxt.Margin = new System.Windows.Forms.Padding(4);
             this.contxt.Name = "contxt";
             this.contxt.Size = new System.Drawing.Size(132, 22);
             this.contxt.TabIndex = 4;
@@ -92,7 +94,7 @@
             // inttxt
             // 
             this.inttxt.Location = new System.Drawing.Point(33, 238);
-            this.inttxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inttxt.Margin = new System.Windows.Forms.Padding(4);
             this.inttxt.Name = "inttxt";
             this.inttxt.Size = new System.Drawing.Size(132, 22);
             this.inttxt.TabIndex = 5;
@@ -100,7 +102,7 @@
             // wistxt
             // 
             this.wistxt.Location = new System.Drawing.Point(33, 286);
-            this.wistxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wistxt.Margin = new System.Windows.Forms.Padding(4);
             this.wistxt.Name = "wistxt";
             this.wistxt.Size = new System.Drawing.Size(132, 22);
             this.wistxt.TabIndex = 6;
@@ -108,7 +110,7 @@
             // chartxt
             // 
             this.chartxt.Location = new System.Drawing.Point(33, 334);
-            this.chartxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartxt.Margin = new System.Windows.Forms.Padding(4);
             this.chartxt.Name = "chartxt";
             this.chartxt.Size = new System.Drawing.Size(132, 22);
             this.chartxt.TabIndex = 7;
@@ -176,7 +178,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(239, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 14;
@@ -188,16 +190,34 @@
             // 
             this.npcRacecmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.npcRacecmb.FormattingEnabled = true;
-            this.npcRacecmb.Location = new System.Drawing.Point(33, 46);
+            this.npcRacecmb.Location = new System.Drawing.Point(33, 14);
             this.npcRacecmb.Name = "npcRacecmb";
             this.npcRacecmb.Size = new System.Drawing.Size(160, 24);
             this.npcRacecmb.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(236, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Hit Points";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(239, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.npcRacecmb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -214,7 +234,7 @@
             this.Controls.Add(this.strengthtxt);
             this.Controls.Add(this.npccmb);
             this.Controls.Add(this.txtOutput);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -240,6 +260,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox npcRacecmb;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

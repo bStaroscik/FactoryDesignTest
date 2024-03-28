@@ -28,23 +28,13 @@ namespace TestFormFactoryDesign
         private void button1_Click(object sender, EventArgs e)
         {
             string selectedClass = npccmb.SelectedItem.ToString();
+            string selectedRace = npcRacecmb.SelectedItem.ToString();
 
             NPCFactory factory = new NPCFactory();
 
             // Create a npc character
-            INPC npc = factory.CreateNPC(selectedClass);
+            INPC npc = factory.CreateNPC(selectedClass, selectedRace);
             txtOutput.Text = npc.Create();
-
-            // Try creating an invalid vehicle type
-            //try
-            //{
-            //    IVehicle invalidVehicle = factory.CreateVehicle("bike");
-            //}
-            //catch (ArgumentException ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //}
-
 
             strengthtxt.Text = npc.Strength().ToString();
             dextxt.Text = npc.Dexterity().ToString();

@@ -9,7 +9,7 @@ namespace TestFormFactoryDesign
 {
     public class NPCFactory
     {
-        public INPC CreateNPC(string npcType)
+        public INPC CreateNPC(string npcClass, string npcRace)
         {
             int strength = 0;
             int dexterity = 0;
@@ -32,16 +32,16 @@ namespace TestFormFactoryDesign
 
             };
 
-            switch (npcType.ToLower())
+            switch (npcRace.ToLower())
             {
-                case "fighter":
-                    return new Fighter(strength, dexterity, constitution, intelligence, wisdom, charisma);
-                case "thief":
-                    return new Thief(strength, dexterity, constitution, intelligence, wisdom, charisma);
-                case "wizard":
-                    return new Wizard(strength, dexterity, constitution, intelligence, wisdom, charisma);
+                case "human":
+                    return new Human(npcClass,strength, dexterity, constitution, intelligence, wisdom, charisma);
+                case "elf":
+                    return new Elf(npcClass, strength, dexterity, constitution, intelligence, wisdom, charisma);
+                case "dwarf":
+                    return new Dwarf(npcClass, strength, dexterity, constitution, intelligence, wisdom, charisma);
                 default:
-                    throw new ArgumentException($"Invalid NPC type: {npcType}");
+                    throw new ArgumentException($"Invalid NPC type: {npcClass}");
 
             }
         }
